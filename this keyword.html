@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	<div id ="imran"> Click here</div>
+	<hr/>
+	
+		<script>
+			function project(){
+				var a = 200;
+				this.x=300;
+				this.y=300;
+				this.z=function(){
+					return this.x + this.y;
+				}
+			}
+			var lp = new project();
+			//document.write(a);//ata local variable ai jonno value show kore na .
+			document.write(lp.z());
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

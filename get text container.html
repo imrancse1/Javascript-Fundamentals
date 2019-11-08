@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	<div id ="imran"> Imran Hossain</div>
+	<hr/>
+	
+		<script>
+			var div1 = document.getElementById("imran").innerText;
+			var div2 = document.querySelector("div").innerText;
+			var div3 = document.querySelectorAll("div")[0].innerText;
+			var div4 = document.getElementsByTagName("div")[0].innerText;
+			
+			document.write(div1+"<br/>"+div2+"<br/>"+div3+"<br/>"+div4);
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

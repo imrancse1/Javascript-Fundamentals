@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<section class="content">
+	<div class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</div>
+	
+	<div class="maincontent">
+	
+		<script>
+			var myname = "Imran hossain";
+			var myname1 = new String("Imran hossain");
+			var num = 12346;
+			var num1 = new Number(12346);
+			document.write(typeof(myname));
+			document.write("<br/>");
+			document.write(typeof(num));
+			document.write("<br/>");
+			document.write(typeof(myname1));
+			document.write("<br/>");
+			document.write(typeof(num1));
+			document.write("<br/>");
+			var person = {
+				firstName : "Imran ",
+				lastName : "Hossain",
+				age : 30,
+				func:function(){
+					return this.firstName + this.lastName;
+				}
+			}
+			document.write(person.func());
+			document.write("<br/>");
+			document.write(person.age);
+			
+			
+		</script>
+	</div>
+	
+	<div class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</div>
+	
+	</section>
+
+</body>
+</html>

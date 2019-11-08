@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">	
+		<h2>Single CheckBox</h2>
+		<br/>
+		<form action="" method="" name="myform">
+			<table>
+				<tr>
+					<td><input type="text" name="t1" onchange="docCal(this.form, this.name)" /></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="chbox" onclick="docCal(this.form, this.name)" /></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="result" onchange="docCal(this.form, this.name)" /></td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="Refresh"  /></td>
+				</tr>
+			</table>
+		</form>
+		
+		<script type="text/javascript">
+			function docCal(form,pfield){
+				if(pfield=="result"){
+					if(form.chbox.checked){
+						form.t1.value = math.sqrt(form.result.value);
+					}else{
+						form.t1.value = form.result.value/2;
+					}
+				}else{
+					if(form.chbox.checked){
+						form.result.value = form.t1.value * form.t1.value;
+					}else{
+						form.result.value = form.t1.value*2;
+					}
+				}
+			}
+		</script>
+		<br/>
+		<hr/>
+		<br/>
+	<h2>Multiple CheckBox</h2>
+	<form  name="myform1" onsubmit="testCode()">
+	<table>
+		<tr>
+			<td>Select</td>
+			<td>
+				<input type="checkbox" name="chbox1" value="JAVA" />JAVA<br/>
+				<input type="checkbox" name="chbox1" value="PHP" />PHP<br/>
+				<input type="checkbox" name="chbox1" value="HTML" />HTML<br/>
+				<input type="checkbox" name="chbox1" value="PY" />PY<br/>
+				<input type="checkbox" name="chbox1" value="CSS" />CSS
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="Submit"/>
+				<input type="reset" value="Refresh"/>
+			</td>
+		</tr>
+	</table>
+	</form>
+	
+	</section>
+	<script type="text/javascript">
+		function testCode(){
+			document.write("You Selected:"+selectedCode());
+		}
+		function selectedCode(){
+			var cd = "<ul>";
+			for(i=0;i<5;i++){
+				var myvalue = document.myform1.chbox1[i];
+				if(myvalue.checked){
+					cd +="<li>"+myvalue.value;
+				}
+			}
+			cd +="</ul>";
+			return cd;
+		}
+	</script>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("JavaScript");</script></h2>
+	</header>
+	<section class="maincontent">
+	<h2>single Radio</h2>
+	<form  name="myform1" onsubmit="testCode()">
+	<table>
+		<tr>
+			<td>Select</td>
+			<td>
+				<input type="radio" name="rdbox" value="JAVA" />JAVA<br/>
+				<input type="radio" name="rdbox" value="PHP" />PHP<br/>
+				<input type="radio" name="rdbox" value="HTML" />HTML<br/>
+				<input type="radio" name="rdbox" value="PY" />PY<br/>
+				<input type="radio" name="rdbox" value="CSS" />CSS
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="Submit"/>
+				<input type="reset" value="Refresh"/>
+			</td>
+		</tr>
+	</table>
+	</form>
+	
+	</section>
+	<script type="text/javascript">
+		function testCode(){
+			document.write("You Selected:"+selectedCode());
+		}
+		function selectedCode(){
+			for(i=0;i<5;i++){
+				var myvalue = document.myform1.rdbox[i];
+				if(myvalue.checked){
+					return myvalue.value;
+				}
+			}
+		}
+	</script>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

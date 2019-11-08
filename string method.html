@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	
+		<script>
+			function revMe(s){
+				return s.split("").reverse().join("");
+			}
+			var x= "prince mahamuds";
+			var rv = revMe(x);
+			document.write(rv);
+		</script>
+		<br/>
+		<script>
+				String.prototype.revMe = function(){
+					var s = "";
+					var i = this.length;
+					while(i>0){
+						s+=this.substring(i-1,i);
+						i--;
+					}
+					return s;
+				}
+				var x = "prince mahamuds";
+				document.write(x.revMe());
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

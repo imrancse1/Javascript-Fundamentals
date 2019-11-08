@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("JavaScript");</script></h2>
+	</header>
+	<section class="maincontent">
+	<h2>Validation Fields</h2>
+	<form  name="myform" method="post" onsubmit=" return validateForm()">
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" /></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="email" /></td>
+		</tr>
+		<tr>
+			<td>Telephone</td>
+			<td>
+			<input type="text" name="telephone" /><br/>
+			<input type="checkbox" name="noCall" onclick="enableDisable(this);" />Please do not call me.
+			</td>
+			
+		</tr>
+		<tr>
+			<td>What can we help you with?</td>
+			<td>
+			<select name="subject">
+			<option>Select One</option>
+			<option>Customer Service</option>
+			<option>Question </option>
+			<option>Others </option>
+			
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Comment</td>
+			<td><input type="text" value="" name="comment" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" name="submit" value="Submit"/>
+				<input type="reset" name="reset" value="Refresh"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td>
+			   <div id="state"></div>
+			</td>
+		</tr>
+		
+	</table>
+	</form>
+	
+	</section>
+	<script type="text/javascript">
+		function validateForm(){
+			var name      = document.myform.name;
+			var email     = document.myform.email;
+			var telephone = document.myform.telephone;
+			var noCall    = document.myform.noCall;
+			var subject   = document.myform.subject;
+			var comment   = document.myform.comment;
+			
+			if(name.value == ""){
+			document.getElementById("state").innerHTML = "Please Enter Your Name..";
+			return false;
+		  }
+		  if(email.value == ""){
+			document.getElementById("state").innerHTML = "Please Enter Your Email..";
+			return false;
+		  }
+		  if(email.value.indexOf("@",0)<0){
+			document.getElementById("state").innerHTML = "Please Enter Your Valid Email Address..";
+			return false;
+		  }
+		  if(email.value.indexOf(".",0)<0){
+			document.getElementById("state").innerHTML = "Please Enter Your Valid Email Address..";
+			return false;
+		  }
+		  if(telephone.value == "" && noCall.checked == false){
+			document.getElementById("state").innerHTML = "Please Enter Your Telephone Number..";
+			return false;
+		  }
+		  if(subject.selectedIndex < 1){
+			document.getElementById("state").innerHTML = "Please tell us who we can help you";
+			return false;
+		  }
+		  if(comment.value == ""){
+			document.getElementById("state").innerHTML = "Please put a comment";
+			return false;
+		  }
+		}
+		
+		function enableDisable(chkbox){
+			if(chkbox.checked == true){
+				document.myform.telephone.disabled = true;
+			}else{
+				document.myform.telephone.disabled = false;
+			}
+		}
+		
+		
+		
+	</script>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	
+		<script>
+			function totalNum(a){
+			//private
+				x=20;
+				total = function(){
+					return x+a;
+				};
+				//public
+				this.result=function(){
+					this.sum=total();
+					return "Result is :"+this.sum;
+				}
+			}
+			
+			var tn = new totalNum(10);
+			console.log(tn.result());
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

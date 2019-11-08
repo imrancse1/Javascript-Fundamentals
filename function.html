@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<section class="content">
+	<div class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</div>
+	
+	<div class="maincontent">
+		<script>
+			var color = "green";//global variable
+			function functionone(){
+				//var color="red";//local variable
+				window.color ="red";//global variable
+				document.write("Inside function color is :"+color);
+			}
+			functionone();
+			document.write("<br/>");
+			document.write("Outside function is :"+color);
+		</script>
+	</div>
+	
+	<div class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</div>
+	
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	
+		<div>
+			<span id="hour"></span>:
+			<span id="minute"></span>:
+			<span id="second"></span>
+		</div>
+	
+		<script>
+		
+				function clock(){
+					var date = new Date();
+					//document.write(date);
+					
+					var hour = date.getHours();
+					var minute = date.getMinutes();
+					var second = date.getSeconds();
+					
+					
+					document.getElementById("hour").innerHTML = hour;
+					document.getElementById("minute").innerHTML = minute;
+					document.getElementById("second").innerHTML = second;
+					
+					
+				}
+				
+				setInterval(clock, 1000);
+				
+		</script>
+		
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

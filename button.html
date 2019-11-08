@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">	
+		
+		<form action="" method="" name="myform">
+			<table>
+				<tr>
+					<td><input type="text" name="inputbox" /></td>
+					<td><input type="button" value="click" name="button" onclick="testResult(this.form)" /></td>
+				</tr>
+			</table>
+		</form>
+		
+		<script type="text/javascript">
+			function testResult(form){
+				var testvar = form.inputbox.value;
+				if(testvar ==""){
+					alert("Please Type Something...");
+				}else{
+					alert("You Typeing.."+testvar);
+				}
+			}
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

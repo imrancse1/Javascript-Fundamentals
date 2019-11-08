@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	
+	<button onclick="myreg()">Search</button>
+	<div id ="show1"></div>
+	<br/>
+	<br/>
+	<button onclick="myReplace()">Replace</button>
+	<div id ="show">my name is prince</div>
+	<br/>
+	<br/>
+	<button onclick="myRe()">Test Now</button>
+	<div id = "str">MY name is prince</div>
+	<div id = "str1"></div>
+	
+	
+		
+		<script type="text/javascript">
+		function myreg(){
+			var str = "live project";
+			var sr = str.search(/project/i);
+			document.getElementById("show1").innerHTML=sr;
+			}
+			document.write("<br/>");
+			function myReplace(){
+				var str = document.getElementById("show").innerHTML;
+				var input = str.replace("prince","imran");
+				document.getElementById("show").innerHTML=input;
+			}
+			document.write("<br/>");
+			function myRe(){
+				txt = document.getElementById("str").innerHTML;
+				document.getElementById("str1").innerHTML = /p/.test(txt);
+				
+				//document.getElementById("str1").innerHTML = /p/.exec(txt);
+			}
+			
+		</script>
+	</section>
+	<section id = "maincontent">
+	<h2>Numeric value Check</h2>
+	<table>
+		<tr>
+			<td>Your input</td>
+			<td><input type="text" id="getValue"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" value="Check" onclick="getNumber()"/></td>
+		</tr>
+		<tr>
+			<td>Result</td>
+			<td><textarea id="showValue"></textarea></td>
+		</tr>
+	
+	</table>
+	
+	<script type="text/javascript">
+			function getNumber(){
+				document.getElementById("showValue").value ="";
+				var getString = document.getElementById("getValue").value;
+				var result = getString.match(/\d+/g);
+				if(result !=null){
+				for(var i=0; i<result.length;i++){
+					document.getElementById("showValue").value +=result[i]+"\n";
+				}
+			 }	
+			}
+	
+	</script>
+	
+	</section>
+	<section id = "maincontent">
+	<h2>Email Validation</h2>
+	<table>
+		<tr>
+			<td>Your Email:</td>
+			<td><input type="text" id="getValue1" onkeyup="validateEmail()" /></td>
+		</tr>
+	</table>
+	
+	<script type="text/javascript">
+			function validateEmail(){
+				var getEmail = document.getElementById("getValue1");
+				var email = getEmail.value;
+				var emailExpression = /([a-zA-Z0-9_\-\.]@((\[[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})/;
+				getEmail.style.color = "blue";
+				if(emailExpression.test(email)){
+					getEmail.style.backgroundColor = "green";
+				}else{
+					getEmail.style.backgroundColor = "red";
+				}
+			 }	
+			
+	
+	</script>
+	
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+	
+		<script>
+			function totalNum(a, b){
+				this.x=a;
+				this.y=b;
+				this.sum = function(){
+					return this.x + this.y;
+				}
+			}
+			var tn = new totalNum(10,5);
+			console.log(tn.sum());
+			console.log(tn.toString());
+		</script>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>

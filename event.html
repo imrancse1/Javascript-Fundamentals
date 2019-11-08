@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body onload="alert()" >
+	<section class="content">
+	<div class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</div>
+	
+	<div class="maincontent">
+	
+	<button onclick="checkEvent()">Your Action onclick</button>
+	<button ondblclick="checkEvent()">Your Action on double click</button>
+	<button onmouseover="checkEvent()">Your Action Mouse</button>
+	<button onmouseup="checkEvent()">Your Action Mouse up</button>
+	<button onmousedown="checkEvent()">Your Action Mouse down</button>
+	<button onkeydown="checkEvent()">Your Action key down</button>
+	<button onkeyup="checkEvent()">Your Action key up</button>
+	<button onkeypress="checkEvent()">Your Action key press</button>
+	
+	<input type="text" onfocus ="checkEvent()" />
+	<input type="text" onblur ="checkEvent()" />
+	
+		<script>
+			function checkEvent(){
+				console.log("Your ever here...");
+			}
+		</script>
+	</div>
+	
+	<div class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</div>
+	
+	</section>
+
+</body>
+</html>

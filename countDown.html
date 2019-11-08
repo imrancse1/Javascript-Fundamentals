@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body  >
+	<section class="content">
+	<header class="header">
+		<h2><script>document.write("Tutorial: JavaScript");</script></h2>
+	</header>
+	
+	<section class="maincontent">
+		<script>
+				var countdown;
+				var countdownNum;
+				function countdownInit(){
+					countdownNum = 100;
+					countdownTigger();
+				}
+				function countdownTigger(){
+					if(countdownNum > 0){
+						countdownNum--;
+						document.getElementById("show").innerHTML = countdownNum;
+						
+						if(countdownNum > 0){
+							countdown = setTimeout("countdownTigger()",1000);
+						}
+					}
+				}
+				function countdownClear(){
+					clearTimeout(countdown)
+				}
+		</script>
+		<div>
+			<input type="button" value=" start TimeOut" onclick="countdownInit()"/>
+			<input type="button" value=" stop timeoutClear" onclick="countdownClear()"/>
+		</div>
+		<div id="show"></div>
+	</section>
+	
+	<footer class="footer">
+		<h2> <script>document.write("JavaScript");</script> </h2>
+	</footer>
+	
+	</section>
+
+</body>
+</html>
